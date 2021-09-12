@@ -19,7 +19,7 @@ function Expenses(){
           ExpenseName:"Life Insurance",
           ExpensePrice:400.67
         }
-      ]
+      ];
 
       return(
         <Card className="expense">
