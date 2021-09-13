@@ -5,7 +5,10 @@
   min-height: 100vh;
 }
 .App-header {
-  color: white;
+  font-size: 25px;
+  text-align: center;
+  font-family: fantasy;
+  color: red;
 }
 .expenseContainer, .newExpense{
   display: flex;

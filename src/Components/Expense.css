@@ -1,4 +1,17 @@
 .expense{
+    display: flex;
+    flex-direction: column;
     width: 50%;
-    background-color: slategray;
+    background-color: black;
+    padding: 5px;
+  }
+
+  .expenseFilter{
+    width: 100%;
+    text-align: end;
+    padding: 5px;
+  }
+
+  .expenseList{
+    width: 100%;
   }

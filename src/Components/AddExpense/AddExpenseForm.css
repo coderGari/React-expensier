@@ -1,0 +1,41 @@
+.Expense_form{
+    width: 100%;
+    float: left;
+}
+
+.expenseName, .expensePrice{
+    width: 40%;
+    height: 50px;
+    margin: 15px;
+    float: left;
+}
+.newExpenseDate{
+    width: 50%;
+    height: 40px;
+    margin: 15px;
+}
+
+label{
+    color: white;
+}
+
+input{
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.submitBtn{
+    width: 100%;
+    float: right;
+    margin: 20px;
+}
+button{
+    border:2px solid palevioletred;
+    border-radius: 5px;
+    background-color: rgb(54, 5, 54);
+    margin: 10px;
+    color: white;
+    font-size: 15px;
+}
