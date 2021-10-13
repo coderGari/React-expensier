@@ -20,7 +20,6 @@ const dataPoints = [
         const month = parseInt(expense.ExpenseDate.toString().substring(6,7))-1;
         dataPoints[month].value += expense.ExpensePrice;
     }
-    console.log(dataPoints);
 
     return(<Charts dataPoints={dataPoints} />);
 }

@@ -14,7 +14,6 @@ function Expenses(props){
     const expenseArray = props.dummyArray;
 
     const filteredExpenseArray = expenseArray.filter(e => {
-      console.log("Selected filter: "+e.ExpenseDate.toString().substring(0,4));
       return e.ExpenseDate.toString().substring(0,4) === filterState;
     });
 
@@ -26,7 +25,7 @@ function Expenses(props){
         </div>
         <ExpenseCharts expenses={filteredExpenseArray}/>
         <div className="expenseList">
-          <ExpenseList filteredArray = {filteredExpenseArray}/>
+          <ExpenseList filteredArray = {filteredExpenseArray} onDelete = {props.onDelete}/>
         </div>
       </Card>
       );

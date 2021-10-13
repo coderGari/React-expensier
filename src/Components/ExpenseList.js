@@ -6,11 +6,12 @@ function ExpenseList(props){
 
     if(props.filteredArray.length > 0){
       listItems = props.filteredArray.map(expenseList => 
-        <ExpenseItem
-          Key={expenseList.id}
+        <ExpenseItem key={expenseList.id}
+          itemId = {expenseList.id}
           ExpenseDate={expenseList.ExpenseDate} 
           ExpenseName={expenseList.ExpenseName} 
-          ExpensePrice={expenseList.ExpensePrice}/>
+          ExpensePrice={expenseList.ExpensePrice}
+          onDelete = {props.onDelete}/>
         );
     }
 

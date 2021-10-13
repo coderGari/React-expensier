@@ -35,16 +35,13 @@ function AddExpenseForm(props){
     
     const submitHandler = (event) => {
         event.preventDefault();
-        console.log(props.newId);
-        setNewId((preId)=> {return preId+1})
+        setNewId((preId)=> {console.log("previous value id: "+preId); return (preId+1)})
         const newExpenseData = {
-            id:newId,
+            id:props.newId+1,
             ExpenseName: userInput.ExpenseName,
             ExpensePrice: +userInput.ExpensePrice,
             ExpenseDate:userInput.ExpenseDate
         }
-    
-        console.log(newExpenseData);
     
         props.onAddExpense(newExpenseData);
     

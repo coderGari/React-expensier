@@ -12,13 +12,13 @@ const expenseArray = [
   },
   {
     id:2,
-    ExpenseDate:"2021-01-11",
+    ExpenseDate:"2021-02-11",
     ExpenseName:"Home Insurance",
-    ExpensePrice:1265.67
+    ExpensePrice:365.67
   },
   {
     id:3,
-    ExpenseDate:"2021-01-12",
+    ExpenseDate:"2021-03-12",
     ExpenseName:"Life Insurance",
     ExpensePrice:400.67
   }
@@ -33,17 +33,23 @@ function App() {
     setExpenses((preState) => {
       return [newExpense, ...preState];
     });
-  } 
+  }
+  const onDelete = id => {
+    let oldExpeenseList = [...expenses];
+    const newList = oldExpeenseList.filter((item) => item.id !== id);
+    setExpenses(newList);
+  }
+  
   return (
     <div className="App">
       <header className="App-header">
-        <h2>EXPENSE TRACKER</h2>
+        <h2>BUDGET FIXER</h2>
       </header>
       <div className="newExpense">
       <NewExpense newId={expenses.length} onAddExpense = {addNewExpense} />
       </div>
       <div className="expenseContainer">
-      <Expenses dummyArray = {expenses}/>
+      <Expenses dummyArray = {expenses} onDelete = {onDelete}/>
       </div>    
     </div>
   );
